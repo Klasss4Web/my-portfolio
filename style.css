@@ -113,7 +113,7 @@ h3 {
 
 .external-link {
   text-decoration: none;
-  color: orangered;
+  color: var(--clr-accent);
 }
 
 .section__title {
