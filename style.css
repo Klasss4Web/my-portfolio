@@ -94,6 +94,10 @@ strong {
   transform: scale(1.1);
 }
 
+a:hover {
+  color: orangered;
+}
+
 h1, h2, h3 {
   line-height: 1.1;
   margin: 0;
@@ -114,6 +118,11 @@ h3 {
 .external-link {
   text-decoration: none;
   color: var(--clr-accent);
+}
+
+.enternal-link_zoon {
+  text-decoration: none;
+  color: #fff;
 }
 
 .section__title {
