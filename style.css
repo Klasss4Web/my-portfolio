@@ -337,6 +337,7 @@ header {
 }
 
 .intro__img {
+  min-width: 100%;
   box-shadow: var(--bs);
 }
 
