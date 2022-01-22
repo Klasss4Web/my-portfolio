@@ -375,6 +375,10 @@ header {
 
 /*********************My Services****************/
 .my-services {
+   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 14px;
   background-color: var(--clr-dark);
   background-image: url(assets/working.jpg);
   background-blend-mode: multiply;
@@ -382,6 +386,7 @@ header {
   background-repeat: no-repeat;
   color: var(--clr-light);
   text-align: center;
+ 
 }
 
 .section__title--services {
@@ -408,11 +413,37 @@ header {
   margin: 0 auto;
 }
 
+.service h3{
+  color: teal;
+  margin-top: 10px;
+}
+
 .service h3 {
   margin-bottom: 20px;
 }
 
+.my-stacks {
+  display: flex;
+}
+
+.my-tools {
+  margin-top: 50px;
+  align-self: center;
+  font-size: 14px;
+}
+
+.my-tools h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: teal;
+}
+
 @media (min-width: 800px) {
+
+  .my-services {
+     flex-direction: row;
+     font-size: 18px;
+  }
   .services {
     display: flex;
     max-width: 1000px;
@@ -424,6 +455,11 @@ header {
     max-width: 650px;
     margin: 0 auto;
   }
+
+  .service-ux{
+  /* color: teal; */
+  margin-top: 10px;
+}
 
   .service + .service {
     margin-left: 2em;
