@@ -278,7 +278,7 @@ header {
     width: 100%;
     display: block;
     background: var(--clr-accent);
-    opacity: 0.5;
+    /* opacity: 0.5; */
     z-index: 100;
   }
  
@@ -414,11 +414,13 @@ header {
 .service {
   max-width: 500px;
   margin: 0 auto;
+  text-align:left ;
 }
 
 .service h3{
   color: teal;
   margin-top: 10px;
+  text-align: left;
 }
 
 .service h3 {
@@ -433,12 +435,15 @@ header {
   margin-top: 50px;
   align-self: center;
   font-size: 14px;
+  text-align: left;
 }
 
 .my-tools h4 {
   font-size: 18px;
   margin-bottom: 20px;
   color: teal;
+  text-align: left;
+  margin-left: -20px;
 }
 
 @media (min-width: 800px) {
@@ -531,13 +536,16 @@ header {
 .portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px
 }
 
 .portfolio__item {
+  border-radius: 5px;
   background-color: var(--clr-accent);
 }
 
 .portfolio__img {
+    border-radius: 5px;
   transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
               opacity 250ms linear;
 }
@@ -622,4 +630,266 @@ header {
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+
+/* Animation */
+
+/* .intro-img_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  perspective: 580px;
+  transition: all .5s;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 15%, rgba(121, 9, 9, 1) 100%);
+} */
+
+/* .intro-img_body:hover {
+  perspective: 1500px;
+} */
+
+.intro-img_wrapper{
+  min-width: 250px;
+  height: 250px;
+  position: relative;
+  transition: all 10s;
+  transform: rotateZ(0) rotateX(0) rotateY(0);
+  transform-style: preserve-3d;
+}
+
+.intro-img_wrapper:hover {
+  transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);
+ 
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all .5s;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.face:nth-child(1) {
+  background-image: url("./assets/bootstrap.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center left;
+  transform: rotateY(90deg) translateX(-125px);
+}
+
+.face:nth-child(2) {
+  background-image: url("./assets/redux.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center right;
+  transform: rotateY(90deg) translateX(125px);
+}
+
+.face:nth-child(3) {
+  background-image: url("./assets/nodee.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center top;
+  transform: rotateX(90deg) translateY(-125px);
+}
+
+.face:nth-child(4) {
+  background-image: url("./assets/css.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: rotateX(90deg) translateY(125px);
+}
+
+.face:nth-child(5) {
+  background-image: url("./assets/javascript_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: translateZ(-125px);
+}
+
+.face:nth-child(6) {
+  background-image: url("./assets/reactjs.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: translateY(-100vh);
+  transform: translateZ(125px);
+}
+
+
+.word span {
+  position: relative;
+  display: inline-block;
+  animation: fall 3.5s forwards;
+  transform: translateY(-100vh);
+}
+
+.word span:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.word span:nth-child(1) {
+  animation-delay: 1.1s;
+}
+
+.word span:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+@keyframes fall {
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.slide-animate span {
+   position: relative;
+  display: inline-block;
+  animation: slide 3.5s forwards;
+  transform: translateX(-120vw);
+}
+
+.slide-animate span:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.slide-animate span:nth-child(3) {
+  animation-delay: 1.1s;
+}
+
+/* .slide-animate span:nth-child(4) {
+  animation-delay: 1.2s;
+} */
+
+@keyframes slide {
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes left-slide {
+  /* 100%{
+    transform: translateX(0);
+  } */
+    0% {
+    transform: translateX(1200vw);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);    
+  }
+
+}
+
+.slide-animate_two {
+   position: relative;
+  display: inline-block;
+  animation: left-slide 3.5s forwards;
+  animation-direction: alternate;
+  transform: translateX(-100vw);
+}
+
+/* portfolio images */
+.port_img_wrapper {
+  /* min-width: 250px;
+  height: 250px; */
+  padding: 0 2em 2em;
+  max-width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  transition: all 10s;
+  transform: rotateZ(0) rotateX(0) rotateY(0);
+  transform-style: preserve-3d;
+}
+
+.port_img_wrapper:hover {
+  transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);
+ 
+}
+
+.port_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all .5s;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.port_img:nth-child(1) {
+  background-image: url("./assets/bootstrap.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center left;
+  transform: rotateY(90deg) translateX(-200px);
+}
+
+.port_img:nth-child(2) {
+  background-image: url("./assets/redux.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center right;
+  transform: rotateY(90deg) translateX(200px);
+}
+
+.port_img:nth-child(3) {
+  background-image: url("./assets/Fixmeet.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center top;
+  transform: rotateX(90deg) translateY(-200px);
+}
+
+.port_img:nth-child(4) {
+  background-image: url("./assets/reactjs.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: rotateX(90deg) translateY(200px);
+}
+
+.port_img:nth-child(5) {
+  background-image: url("./assets/javascript_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: translateZ(-200px);
+}
+
+.port_img:nth-child(6) {
+  background-image: url("./assets/Fixmeet 3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center bottom;
+  transform: translateY(-100vh);
+  transform: translateZ(200px);
 }
