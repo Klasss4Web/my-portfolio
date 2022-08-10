@@ -655,7 +655,7 @@ header {
 } */
 
 .intro-img_wrapper{
-  min-width: 250px;
+  width: 250px;
   height: 250px;
   position: relative;
   /* transition: all 10s; */
@@ -743,8 +743,12 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   transform-origin: center bottom;
-  transform: translateY(-100vh);
+  /* transform: translateY(-100vh); */
   transform: translateZ(125px);
+  box-shadow: 0 0 150px rgba(0, 255, 0, 0.2),
+              0 0 200px rgba(0, 255, 0, 0.4)
+              0 0 200px rgba(0, 255, 0, 0.4)
+              0 0 200px rgba(0, 255, 0, 0.4);
 }
 
 
