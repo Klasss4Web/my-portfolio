@@ -40,6 +40,7 @@
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
+  
 }
 
 /***General Styles**/
@@ -270,6 +271,8 @@ header {
 }
 
 @media (min-width:800px) {
+
+  
 
   header {
     position: fixed;
@@ -566,6 +569,7 @@ header {
     height: 300px;
     width: 500px;
   }
+  
 }
 
 /*********************Footer*****************************/
@@ -654,9 +658,20 @@ header {
   min-width: 250px;
   height: 250px;
   position: relative;
-  transition: all 10s;
+  /* transition: all 10s; */
   transform: rotateZ(0) rotateX(0) rotateY(0);
   transform-style: preserve-3d;
+  animation: revolve 10s linear infinite;
+}
+
+@keyframes revolve {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
 }
 
 .intro-img_wrapper:hover {
@@ -894,13 +909,14 @@ header {
   transform: translateZ(200px);
 }
 
-/* Ring Animation */
+@media (min-width: 1000px) {
+  /* Ring Animation */
 
 .ring-animation {
   margin: 0;
   padding: 0;
   background: #262626;
- 
+ /* display: none; */
 }
 
 .ring {
@@ -983,3 +999,5 @@ header {
   }
 }
 
+
+}
