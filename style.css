@@ -232,6 +232,12 @@ header {
 
 .logo {
   max-width: 100px;
+  display: block;
+  cursor: pointer;
+}
+
+.logo-small {
+  display: none;
 }
 
 .hamburger {
@@ -309,6 +315,11 @@ header {
 
   .logo {
     max-width: 100px;
+    display: none;
+  }
+
+  .logo-small {
+    display: block;
   }
 
   .hamburger {
