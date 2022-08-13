@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto:wght@700&display=swap");
 
 *,
 *::before,
@@ -12,7 +11,6 @@
 
 /***Custom Proprties, Update for your own designs**/
 :root {
- 
   --ff-primary: "Source Sans Pro", sans-serif;
   --ff-secondary: "Roboto" "Source Code Pro", monospace, sans-serif;
 
@@ -28,9 +26,8 @@
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 
-  --bs: 0.25em 0.25em .75em rgba(0, 0, 0, 0.25),
-        0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
-        
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 1000px) {
@@ -40,7 +37,6 @@
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
-  
 }
 
 /***General Styles**/
@@ -84,7 +80,7 @@ strong {
   color: var(--clr-dark);
   border-radius: 25px;
   text-decoration: none;
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 2px;
@@ -100,7 +96,9 @@ a:hover {
   color: orangered;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: 1.1;
   margin: 0;
 }
@@ -128,7 +126,7 @@ h3 {
 }
 
 .section__title {
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .section__title--intro {
@@ -144,20 +142,17 @@ h3 {
   margin: 0;
   font-size: var(--fs-h3);
   border-radius: 5px;
-
 }
 
 .section__subtitle--intro,
-.section__subtitle--about
- {
+.section__subtitle--about {
   background: var(--clr-accent);
   font-family: var(--ff-secondary);
   font-size: 1.1rem;
   margin-bottom: 1em;
-  padding: .25em 1em;
+  padding: 0.25em 1em;
   line-height: 1.6;
 }
-
 
 /*****************Navigation****************/
 
@@ -176,9 +171,9 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  
+
   transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 .nav__list {
@@ -204,7 +199,7 @@ header {
 }
 
 .nav-toggle {
-  padding: .5em;
+  padding: 0.5em;
   background: transparent;
   border: 0;
   cursor: pointer;
@@ -224,7 +219,7 @@ header {
 }
 
 .nav-open .hamburger {
-  transform: rotate(.625turn);
+  transform: rotate(0.625turn);
 }
 
 .nav-open .hamburger::before {
@@ -239,12 +234,12 @@ header {
   max-width: 100px;
 }
 
-.hamburger { 
+.hamburger {
   display: block;
-  position: relative;  
+  position: relative;
 }
 
-.hamburger, 
+.hamburger,
 .hamburger::before,
 .hamburger::after {
   background: var(--clr-accent);
@@ -270,10 +265,7 @@ header {
   bottom: 6px;
 }
 
-@media (min-width:800px) {
-
-  
-
+@media (min-width: 800px) {
   header {
     position: fixed;
     top: 0;
@@ -284,7 +276,7 @@ header {
     /* opacity: 0.5; */
     z-index: 100;
   }
- 
+
   .nav {
     position: relative;
     width: 100%;
@@ -293,7 +285,7 @@ header {
     color: var(--clr-dark);
     transform: translateX(0%);
   }
-  
+
   .nav__list {
     display: flex;
     list-style: none;
@@ -303,37 +295,36 @@ header {
     margin: 0;
     padding: 0;
   }
-  
+
   .nav__link {
     color: black;
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
     text-decoration: none;
   }
-  
+
   .nav__link:hover {
     color: orangered;
   }
- 
+
   .logo {
     max-width: 100px;
   }
-  
-  .hamburger { 
+
+  .hamburger {
     display: none;
   }
-  
-  .hamburger, 
-  .hamburger::before,
-  .hamburger::after {
-    display: none;
-  }
-  
+
+  .hamburger,
   .hamburger::before,
   .hamburger::after {
     display: none;
   }
 
+  .hamburger::before,
+  .hamburger::after {
+    display: none;
+  }
 }
 
 /*****************Intro Section****************/
@@ -348,17 +339,15 @@ header {
 }
 
 @media (min-width: 600px) {
-
   .intro {
     display: grid;
     grid-column-gap: 1em;
     width: min-content;
     margin: 100px auto 0 auto;
-    grid-template-areas: 
+    grid-template-areas:
       "img title"
       "img subtitle";
     grid-template-columns: min-content max-content;
-
   }
 
   .intro__img {
@@ -381,7 +370,7 @@ header {
 
 /*********************My Services****************/
 .my-services {
-   display: flex;
+  display: flex;
   justify-content: space-between;
   flex-direction: column;
   font-size: 14px;
@@ -392,7 +381,6 @@ header {
   background-repeat: no-repeat;
   color: var(--clr-light);
   text-align: center;
- 
 }
 
 .section__title--services {
@@ -418,20 +406,19 @@ header {
   max-width: 500px;
   height: 320px;
   margin: 0 auto;
-  text-align:left ;
-   border: 1px solid #303030;
-   border-radius: 10px;
+  text-align: left;
+  border: 1px solid #303030;
+  border-radius: 10px;
   padding: 20px;
   box-shadow: 5px 10px 8px #888888;
-  transition: all .9s ease-in-out; 
+  transition: all 0.9s ease-in-out;
 }
 
 .service:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
-
-.service h3{
+.service h3 {
   color: teal;
   margin-top: 5px;
   text-align: left;
@@ -468,17 +455,16 @@ header {
   margin-left: -20px;
 }
 
-  .service:nth-child(2){
+.service:nth-child(2) {
   /* color: teal; */
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 @media (min-width: 800px) {
-
   .my-services {
-     flex-direction: column;
-     font-size: 16px;
+    flex-direction: column;
+    font-size: 16px;
   }
   .services {
     display: flex;
@@ -492,37 +478,36 @@ header {
     margin: 0 auto;
   }
 
-  .service:nth-child(2){
-  /* color: teal; */
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+  .service:nth-child(2) {
+    /* color: teal; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 
   .service + .service {
     margin-left: 2em;
   }
 }
 
-.about-me { 
+.about-me {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.about-me__body { 
+.about-me__body {
   margin-bottom: 20px;
 }
 
-.about-me__img { 
+.about-me__img {
   box-shadow: var(--bs);
   border-radius: 10px;
 }
 
-
 @media (min-width: 600px) {
-  .about-me { 
+  .about-me {
     display: grid;
     grid-template-columns: 1fr 200px;
-    grid-template-areas: 
+    grid-template-areas:
       "title img"
       "subtitle img"
       "text img";
@@ -544,7 +529,7 @@ header {
   }
 
   .about-me__img {
-    grid-area: img; 
+    grid-area: img;
     position: relative;
     z-index: 2;
   }
@@ -552,6 +537,7 @@ header {
 
 /****************************My Work**********************************/
 .my-work {
+  width: 100%;
   background-color: var(--clr-dark);
   color: var(--clr-light);
   text-align: center;
@@ -564,9 +550,10 @@ header {
 }
 
 .portfolio {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 10px
+  grid-gap: 10px;
 }
 
 .portfolio__item {
@@ -575,20 +562,78 @@ header {
 }
 
 .portfolio__img {
-    border-radius: 5px;
-  transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
-              opacity 250ms linear;
+  border-radius: 5px;
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
 }
 
-.portfolio__item {
+/* .portfolio__item {
   position: relative;
   z-index: 2;
-}
+} */
 
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img {
   transform: scale(1.2);
-  opacity: .5;
+  opacity: 0.5;
+}
+
+.flip-card {
+  background-color: transparent;
+  position: relative;
+  /* width: 300px;
+  height: 500px; */
+  /* border-radius: 10px; */
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front {
+  position: absolute;
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+
+.flip-card-back {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: var(--clr-accent);
+  color: white;
+  transform: rotateY(180deg);
 }
 
 @media (min-width: 800px) {
@@ -596,7 +641,13 @@ header {
     height: 300px;
     width: 500px;
   }
-  
+
+  .flip-card-front,
+  .flip-card-back {
+    /* height: 300px;
+    width: 310px; */
+    /* border-radius: 10px; */
+  }
 }
 
 /*********************Footer*****************************/
@@ -621,12 +672,12 @@ header {
   text-decoration: underline;
 }
 
-.footer__link:hover, 
+.footer__link:hover,
 .solcial-list__link:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
-.social-list { 
+.social-list {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -635,11 +686,11 @@ header {
 }
 
 .social-list__item {
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }
 
-.social-list__link { 
-  padding: 0 .5em;
+.social-list__link {
+  padding: 0 0.5em;
 }
 
 /*************************Portfolio individual***********************/
@@ -663,7 +714,6 @@ header {
   margin-bottom: 20px;
 }
 
-
 /* Animation */
 
 /* .intro-img_body {
@@ -681,7 +731,7 @@ header {
   perspective: 1500px;
 } */
 
-.intro-img_wrapper{
+.intro-img_wrapper {
   width: 250px;
   height: 250px;
   position: relative;
@@ -703,7 +753,6 @@ header {
 
 .intro-img_wrapper:hover {
   transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);
- 
 }
 
 .face {
@@ -712,7 +761,7 @@ header {
   left: 0;
   bottom: 0;
   right: 0;
-  transition: all .5s;
+  transition: all 0.5s;
   opacity: 1;
   display: flex;
   align-items: center;
@@ -773,11 +822,9 @@ header {
   /* transform: translateY(-100vh); */
   transform: translateZ(125px);
   box-shadow: 0 0 150px rgba(0, 255, 0, 0.2),
-              0 0 200px rgba(0, 255, 0, 0.4)
-              0 0 200px rgba(0, 255, 0, 0.4)
-              0 0 200px rgba(0, 255, 0, 0.4);
+    0 0 200px rgba(0, 255, 0, 0.4) 0 0 200px rgba(0, 255, 0, 0.4) 0 0 200px
+      rgba(0, 255, 0, 0.4);
 }
-
 
 .word span {
   position: relative;
@@ -799,13 +846,13 @@ header {
 }
 
 @keyframes fall {
-  100%{
+  100% {
     transform: translateY(0);
   }
 }
 
 .slide-animate span {
-   position: relative;
+  position: relative;
   display: inline-block;
   animation: slide 3.5s forwards;
   transform: translateX(-120vw);
@@ -824,7 +871,7 @@ header {
 } */
 
 @keyframes slide {
-  100%{
+  100% {
     transform: translateX(0);
   }
 }
@@ -833,20 +880,19 @@ header {
   /* 100%{
     transform: translateX(0);
   } */
-    0% {
+  0% {
     transform: translateX(1200vw);
   }
   50% {
     transform: translateX(50%);
   }
   100% {
-    transform: translateX(0);    
+    transform: translateX(0);
   }
-
 }
 
 .slide-animate_two {
-   position: relative;
+  position: relative;
   display: inline-block;
   animation: left-slide 3.5s forwards;
   animation-direction: alternate;
@@ -869,7 +915,6 @@ header {
 
 .port_img_wrapper:hover {
   transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);
- 
 }
 
 .port_img {
@@ -878,7 +923,7 @@ header {
   left: 0;
   bottom: 0;
   right: 0;
-  transition: all .5s;
+  transition: all 0.5s;
   opacity: 1;
   display: flex;
   align-items: center;
@@ -886,7 +931,7 @@ header {
 }
 
 .port_img:nth-child(1) {
-  background-image: url("./assets/bootstrap.png");
+  background-image: url("./assets/Fixmeet.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -943,92 +988,89 @@ header {
 @media (min-width: 1000px) {
   /* Ring Animation */
 
-.ring-animation {
-  margin: 0;
-  padding: 0;
-  background: #262626;
- /* display: none; */
-}
-
-.ring {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(70%, -50%);
-  width: 150px;
-  height: 150px;
-  background: transparent;
-  border: 3px solid transparent;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 150px;
-  font-family: sans-serif;
-  font-size: 20px;
-  color: var(--clr-dark);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px var(--clr-dark);
-  /* box-shadow: 0 0 20px rgba(0, 0, 0, .5); */
-}
-
-.ring::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  width: 100%;
-  height: 100%;
-  border: 3px solid transparent;
-  border-top: 3px solid var(--clr-accent);
-  border-right: 3px solid var(--clr-accent);
-  border-radius: 50%;
-  animation: animateCircle 2s linear infinite ;
-}
-
-.ring span {
-  display: block;
-  position: absolute;
-  top: calc(50% - 2px);
-  left: 50%;
-  width: 50%;
-  height: 4px;
-  background: transparent;
-  transform-origin: left;
-  animation: animate 2s linear infinite;
-}
-
-.ring span::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  right: -8px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  /* height: 4px; */
-  background: var(--clr-dark);
-  box-shadow: 0 0 20px #fff000;
-}
-
-@keyframes animateCircle {
-  0% {
-    transform: rotate(0deg);
+  .ring-animation {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+    /* display: none; */
   }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
-@keyframes animate {
+  .ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(70%, -50%);
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 150px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: var(--clr-dark);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px var(--clr-dark);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, .5); */
+  }
+
+  .ring::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid var(--clr-accent);
+    border-right: 3px solid var(--clr-accent);
+    border-radius: 50%;
+    animation: animateCircle 2s linear infinite;
+  }
+
+  .ring span {
+    display: block;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: transparent;
+    transform-origin: left;
+    animation: animate 2s linear infinite;
+  }
+
+  .ring span::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    /* height: 4px; */
+    background: var(--clr-dark);
+    box-shadow: 0 0 20px #fff000;
+  }
+
+  @keyframes animateCircle {
     0% {
-    transform: rotate(45deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
-  
-  100% {
-    transform: rotate(405deg);
+  @keyframes animate {
+    0% {
+      transform: rotate(45deg);
+    }
+
+    100% {
+      transform: rotate(405deg);
+    }
   }
-}
-
-
 }
