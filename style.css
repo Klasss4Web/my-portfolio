@@ -472,6 +472,7 @@ header {
   margin-bottom: 30px;
 }
 
+
 @media (min-width: 800px) {
 
     .nav__link {
@@ -480,7 +481,7 @@ header {
 
   .my-services {
     flex-direction: column;
-    font-size: 16px;
+    font-size: 14px;
   }
   .services {
     display: flex;
@@ -504,6 +505,14 @@ header {
     margin-left: 2em;
   }
 }
+
+@media (min-width: 1200px) {
+   .my-services {
+    /* flex-direction: column; */
+    font-size: 16px;
+  }
+}
+
 
 .about-me {
   max-width: 1000px;
@@ -785,7 +794,7 @@ header {
 }
 
 .face:nth-child(1) {
-  background-image: url("./assets/bootstrap.png");
+  background-image: url("./assets/my-picture.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -794,7 +803,7 @@ header {
 }
 
 .face:nth-child(2) {
-  background-image: url("./assets/redux.jpg");
+  background-image: url("./assets/my-pix.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -803,7 +812,7 @@ header {
 }
 
 .face:nth-child(3) {
-  background-image: url("./assets/nodee.png");
+  background-image: url("./assets/my-pix-react.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -812,7 +821,7 @@ header {
 }
 
 .face:nth-child(4) {
-  background-image: url("./assets/css.png");
+  background-image: url("./assets/my_pix.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -821,7 +830,7 @@ header {
 }
 
 .face:nth-child(5) {
-  background-image: url("./assets/javascript_logo.png");
+  background-image: url("./assets/my_picture.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -830,7 +839,7 @@ header {
 }
 
 .face:nth-child(6) {
-  background-image: url("./assets/reactjs.png");
+  background-image: url("./assets/my_pix.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -874,6 +883,8 @@ header {
   transform: translateX(-120vw);
 }
 
+
+
 .slide-animate span:nth-child(2) {
   animation-delay: 0.7s;
 }
@@ -889,6 +900,12 @@ header {
 @keyframes slide {
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes slide-top {
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -913,6 +930,13 @@ header {
   animation: left-slide 3.5s forwards;
   animation-direction: alternate;
   transform: translateX(-100vw);
+}
+
+#slide-animate-top {
+  position: relative;
+  display: inline-block;
+  animation: slide-top 5.5s forwards;
+  transform: translateY(-100vw);
 }
 
 /* portfolio images */
@@ -1089,4 +1113,119 @@ header {
       transform: rotate(405deg);
     }
   }
+}
+
+/* Scroll Styles */
+.scroll-container {
+  height: 100vh;
+  min-height: 450px;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.scroll-container:nth-of-type(1) {
+  background-color: #bdd0c4;
+}
+.scroll-container:nth-of-type(2) {
+  background-color: #f5d2d3;
+}
+.scroll-container:nth-of-type(3) {
+  background-color: #9ab7d3;
+}
+.scroll-container:nth-of-type(4) {
+  background-color: #dfccf1;
+}
+
+.scroll-container:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.scroll-element,
+.scroll-caption {
+  width: 50%;
+}
+
+.scroll-element {
+  min-height: 300px;
+  height: 100%;
+  background-color: #eaeaea;
+}
+
+.scroll-caption {
+  margin: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+  .scroll-container,
+  .scroll-container:nth-of-type(even) {
+    flex-direction: column;
+    align-content: inherit;
+  }
+
+  .scroll-element {
+    height: 100%;
+  }
+
+  .scroll-element,
+  .scroll-caption {
+    width: 100%;
+  }
+}
+/**Styling scrollable elements*/
+.reveal-onscroll {
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .reveal-onscroll .container{
+  margin: 100px;
+} */
+.reveal-onscroll h1{
+  font-size: 3rem;
+  margin: 20px;
+}
+.reveal-onscroll h2{
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.reveal-onscroll .text-container{
+   display: flex;
+}
+.reveal-onscroll .text-container .text-box{
+  margin: 20px;
+  padding: 20px;
+  /* background: inherit; */
+}
+.reveal-onscroll .text-container .text-box h3{
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* @media (max-width: 900px){
+  .reveal-onscroll h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  .reveal-onscroll .text-container{
+    flex-direction: column;
+  }
+} */
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }
