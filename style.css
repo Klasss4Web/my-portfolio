@@ -874,6 +874,8 @@ header {
   transform: translateX(-120vw);
 }
 
+
+
 .slide-animate span:nth-child(2) {
   animation-delay: 0.7s;
 }
@@ -889,6 +891,12 @@ header {
 @keyframes slide {
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes slide-top {
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -913,6 +921,13 @@ header {
   animation: left-slide 3.5s forwards;
   animation-direction: alternate;
   transform: translateX(-100vw);
+}
+
+#slide-animate-top {
+  position: relative;
+  display: inline-block;
+  animation: slide-top 5.5s forwards;
+  transform: translateY(-100vw);
 }
 
 /* portfolio images */
