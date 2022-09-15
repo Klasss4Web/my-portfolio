@@ -10,41 +10,44 @@
   <title>Dev Emmanuel Ochade Website</title>
 </head>
 <body>
-  <header>
+   <header>
     <div class="logo">
-      <img src="" alt="">
+      <img width="30px" src="./assets/logo.png" alt="Logo">
     </div>
     <button class="nav-toggle" aria-label="Toggle navigation">
       <span class="hamburger"></span>
     </button>
     <nav class="nav">
       <ul class="nav__list">
+        <li class="logo-small" style="width: 40%; cursor: pointer;"><img width="30px" src="./assets/logo.png" alt="Logo"></li>
         <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
         <li class="nav__item"><a href="index.html#services" class="nav__link">My service</a></li>
         <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
         <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
-        <li class="nav__item"><a href="/assets/Emmanuel's Resume.pdf" class="nav__link">My Resume</a></li>
+        <li class="nav__item"><a href="https://drive.google.com/file/d/1-KfCjwcJgTMx24kH0RoIFmBxAq7ObmXo/view?usp=sharing" class="nav__link" target="_blank">My Resume</a></li>
       </ul>
     </nav>
   </header>
   <section class="intro" id="home">
     <h1 class="section__title section__title--intro">
-      Simple Shopping <strong>Cart</strong>
+      E-Commerece<strong>App</strong>
     </h1>
-    <p class="section__subtitle section__subtitle--intro">Shopping Cart Built With React</p>
-    <img src="assets/cart.jpg" alt="A picture of dev Emmanuel" class="intro__img">
+    <p class="section__subtitle section__subtitle--intro">E-Commerce APp</p>
+    <img src="./assets/cart.jpg" alt="A picture of dev Emmanuel" class="intro__img">
   </section>
   <div class="portfolio-item-individual">
-    <p>A recruiter asked me to build a simple shopping cart with react in less than three hours. Quite a limited amount of time to get it done, but I managed to get a working shopping cart considering the time available for the task.</p>
-    <a href="https://acorn-shopping.netlify.app">
+    <p>E-Commerce is an online shopping platform built as a side project. I have worked on the frontend of an e-commerce app before but I felt I should take my software devement skill to the next level and build a full stack e-commerece app from scratch.</p>
+    <a href="https://ochade-shop.netlify.app"  class="reveal">
       <img src="assets/cart.jpg" alt="">
     </a>
-    <p>This app was built with react under a short period of time. Alot could have been done but, I felt I should keep it simple. No complexity, no react router, just plain react.</p>
-    <p>My biggest challenge and mistake was keeping react router out of this project, it could have saved me alot of troubles and wasted time. Also, keeping the entire refactoring till the end of the project was another big mistake I made, because I ended up with a functional app and a messed up code base. It was a lesson learnt, one that increased my experience on best practices.</p>
-    <p><a class="external-link" href="https://acorn-shopping.netlify.app">View Project</a></p>
+    <p class="reveal">This app was built with reactjs and bootstrap. Redux was used for state management, the backend was built with Node/Express js with Mongodb holding the data. The frontend is hosted on netlify while the backend is hosted on heroku. The primary payment integrated is paypal with integrations for Stripe, Paystack and Flutterwave ongoing.</p>
+    <p class="reveal">This app has three parts, the user portal, where customers can select items, add the items to cart and make payments while they can track delivery. The Admin portal is basically a dashboard system, where the admin can track ordres, sales, and add users to the platform. Registered merchants have their own dashboard that is not shared. Merchants can add products and see product ratings</p>
+    <p class="reveal">
+      <a class="external-link" href="https://ochade-shop.netlify.app">View Project</a>
+    </p>
   </div>
   
-  <footer class="footer">
+  <footer class="footer reveal">
     <a href="mailto: eochade15@gmail.com" class="footer__link">hello@emmanuel.dev</a>
     <ul class="social-link">
       <li class="social-link__item">
