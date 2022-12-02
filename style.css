@@ -684,12 +684,7 @@ header {
     width: 500px;
   }
 
-  .flip-card-front,
-  .flip-card-back {
-    /* height: 300px;
-    width: 310px; */
-    /* border-radius: 10px; */
-  }
+ 
 }
 
 /*********************Footer*****************************/
