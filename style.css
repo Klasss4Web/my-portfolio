@@ -659,6 +659,7 @@ header {
   position: relative;
   height: 300px;
   width: 100%;
+  padding: 10px;
   border-radius: 10px;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
