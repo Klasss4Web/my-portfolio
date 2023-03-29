@@ -43,9 +43,29 @@
 
 html {
   scroll-behavior: smooth;
+  /* overflow-y: scroll; */
+  /* scrollbar-color: red; */
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--clr-accent);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 body {
   background: var(--clr-light);
@@ -55,6 +75,7 @@ body {
   font-size: var(--fs-body);
   line-height: 1.6;
   overflow-x: hidden;
+  /* overflow-y: scroll; */
 }
 
 section {
@@ -346,8 +367,44 @@ header {
 
 /*****************Intro Section****************/
 
-.intro {
+.intro,
+.contact-us-container {
   position: relative;
+}
+
+.contact-us-container {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-control {
+  height: 40px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 7px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+}
+
+.text-white {
+  color: #fff;
+  width: 100%;
+  max-width: 400px;
 }
 
 .intro__img {
@@ -370,6 +427,12 @@ header {
       "img title"
       "img subtitle";
     grid-template-columns: min-content max-content;
+  }
+
+  .contact-us-container {
+    position: relative;
+    padding: 100px;
+    text-align: center;
   }
 
   .intro__img {
@@ -483,10 +546,8 @@ header {
   margin-bottom: 30px;
 }
 
-
 @media (min-width: 800px) {
-
-    .nav__link {
+  .nav__link {
     font-size: 16px;
   }
 
@@ -518,18 +579,15 @@ header {
 }
 
 @media (min-width: 1200px) {
-   .my-services {
+  .my-services {
     /* flex-direction: column; */
     font-size: 16px;
   }
 
-.d-wrapper .dynamic-txts {
- 
-  display: block;
+  .d-wrapper .dynamic-txts {
+    display: block;
+  }
 }
-
-}
-
 
 .about-me {
   max-width: 1000px;
@@ -654,7 +712,6 @@ header {
   backface-visibility: hidden;
 }
 
-
 .flip-card-back {
   position: relative;
   height: 300px;
@@ -669,7 +726,6 @@ header {
 .flip-card-front {
   background-color: #bbb;
   color: black;
-  
 }
 
 /* Style the back side */
@@ -684,8 +740,6 @@ header {
     height: 300px;
     width: 500px;
   }
-
- 
 }
 
 /*********************Footer*****************************/
@@ -895,8 +949,6 @@ header {
   animation: slide 3.5s forwards;
   transform: translateX(-120vw);
 }
-
-
 
 .slide-animate span:nth-child(2) {
   animation-delay: 0.7s;
@@ -1197,24 +1249,24 @@ header {
 /* .reveal-onscroll .container{
   margin: 100px;
 } */
-.reveal-onscroll h1{
+.reveal-onscroll h1 {
   font-size: 3rem;
   margin: 20px;
 }
-.reveal-onscroll h2{
+.reveal-onscroll h2 {
   font-size: 40px;
   text-align: center;
   text-transform: uppercase;
 }
-.reveal-onscroll .text-container{
-   display: flex;
+.reveal-onscroll .text-container {
+  display: flex;
 }
-.reveal-onscroll .text-container .text-box{
+.reveal-onscroll .text-container .text-box {
   margin: 20px;
   padding: 20px;
   /* background: inherit; */
 }
-.reveal-onscroll .text-container .text-box h3{
+.reveal-onscroll .text-container .text-box h3 {
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
@@ -1231,19 +1283,17 @@ header {
   }
 } */
 
-.reveal{
+.reveal {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
   transition: 1s all ease;
 }
 
-.reveal.active{
+.reveal.active {
   transform: translateY(0);
   opacity: 1;
 }
-
-
 
 .d-wrapper .static-txt {
   color: #fff;
@@ -1275,7 +1325,6 @@ header {
   100% {
     top: -360px;
   }
-  
 }
 
 .dynamic-txts li span {
@@ -1289,18 +1338,16 @@ header {
   height: 100%;
   width: 100%;
   background-color: #f4f4f4;
-  border-left: 2px solid  var(--clr-accent);
+  border-left: 2px solid var(--clr-accent);
   /* border-left: 2px solid #fc6d6d; */
   animation: typing 1.5s steps(10) infinite;
-  
 }
 
 @keyframes typing {
   100% {
     left: 100%;
-    margin: 0 -35px 0 35px
+    margin: 0 -35px 0 35px;
   }
-  
 }
 /* 
 .my-name {
@@ -1334,11 +1381,7 @@ header {
 }
 
 @media (min-width: 1200px) {
- 
-
-.d-wrapper .dynamic-txts {
- 
-  display: block;
-}
-
+  .d-wrapper .dynamic-txts {
+    display: block;
+  }
 }
